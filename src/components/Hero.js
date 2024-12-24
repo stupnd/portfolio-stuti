@@ -1,42 +1,27 @@
-import { motion } from "framer-motion";
+import React from "react";
 
 function Hero() {
   return (
     <section
-      className="h-screen bg-gradient-to-b from-gray-900 to-black text-white flex flex-col justify-center items-center text-center"
+      className="h-screen bg-gradient-to-b from-gray-900 to-blue text-white flex flex-col justify-center items-center text-center relative"
       id="hero"
     >
-      <motion.h1
-        className="text-6xl font-extrabold mb-4"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        Stuti Pandya
-      </motion.h1>
-      <motion.p
-        className="text-xl font-light mb-6"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
-      >
-        Computer Engineer, AI Enthusiast, Web Developer
-      </motion.p>
-      <motion.a
-        href="#work"
-        className="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300"
-        initial={{ scale: 0.8 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-       <a
-  href="#work"
-  className="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 shadow-lg transition duration-300"
->
-  Explore My Work
-</a>
+      {/* Add a background sphere */}
+      <div className="absolute inset-0 flex justify-center items-center">
+        <div className="w-96 h-96 bg-gradient-to-r from-purple-400 to-blue-600 blur-xl rounded-full opacity-40"></div>
+      </div>
 
-      </motion.a>
+      <h1
+  className="text-8xl font-extrabold relative z-10 font-mono"
+
+>
+  Stuti Pandya
+</h1>
+      <p className="text-xl font-light mt-4 relative z-10 font-mono">
+        Computer Engineer, AI Enthusiast, Web Developer
+          </p>
+          
+
     </section>
   );
 }
